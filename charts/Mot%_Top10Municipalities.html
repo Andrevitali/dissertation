@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ea753094858ee1aefa033ef364d1916d"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Mot", "title": "Mode of Transport", "type": "nominal"}, "order": {"field": "percent", "sort": "descending", "type": "quantitative"}, "tooltip": [{"field": "percent", "format": ".2f", "title": "% Movements", "type": "quantitative"}, {"field": "Mot", "title": "Mode of Transport", "type": "nominal"}], "x": {"field": "percent", "title": "% Movements", "type": "quantitative"}, "y": {"field": "End_Nome_Comune", "sort": ["Firenze", "Prato", "Pisa", "Lucca", "Viareggio", "Livorno", "Cascina", "Campi Bisenzio", "Arezzo", "Massa", "Capannori", "Pontedera", "Siena", "Camaiore", "Grosseto"], "title": "Destination", "type": "nominal"}}, "height": 800, "title": "Percentage of Movements by Destination and Mode of Transport", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-ea753094858ee1aefa033ef364d1916d": [{"End_Nome_Comune": "Arezzo", "Mot": "Bus", "tot": 9004.5, "percent": 4.946321602804855}, {"End_Nome_Comune": "Arezzo", "Mot": "Road", "tot": 159771.11, "percent": 87.7649278579722}, {"End_Nome_Comune": "Arezzo", "Mot": "SlowModes", "tot": 5057.89, "percent": 2.7783830941874226}, {"End_Nome_Comune": "Arezzo", "Mot": "Train", "tot": 8210.87, "percent": 4.510367445035516}, {"End_Nome_Comune": "Camaiore", "Mot": "Bus", "tot": 19397.579999999998, "percent": 11.54293418242801}, {"End_Nome_Comune": "Camaiore", "Mot": "Road", "tot": 140862.91, "percent": 83.82340987253464}, {"End_Nome_Comune": "Camaiore", "Mot": "SlowModes", "tot": 6615.31, "percent": 3.9365780641893395}, {"End_Nome_Comune": "Camaiore", "Mot": "Train", "tot": 1171.42, "percent": 0.697077880848014}, {"End_Nome_Comune": "Campi Bisenzio", "Mot": "Bus", "tot": 21185.16, "percent": 10.98610104066657}, {"End_Nome_Comune": "Campi Bisenzio", "Mot": "Road", "tot": 164180.39, "percent": 85.13989761871252}, {"End_Nome_Comune": "Campi Bisenzio", "Mot": "SlowModes", "tot": 4764.29, "percent": 2.470643192075837}, {"End_Nome_Comune": "Campi Bisenzio", "Mot": "Train", "tot": 2706.18, "percent": 1.4033581485450692}, {"End_Nome_Comune": "Capannori", "Mot": "Bus", "tot": 16494.2, "percent": 9.591799837486851}, {"End_Nome_Comune": "Capannori", "Mot": "Road", "tot": 143900.37, "percent": 83.68175149933296}, {"End_Nome_Comune": "Capannori", "Mot": "SlowModes", "tot": 10062.83, "percent": 5.851793427911497}, {"End_Nome_Comune": "Capannori", "Mot": "Train", "tot": 1504.07, "percent": 0.8746552352686912}, {"End_Nome_Comune": "Cascina", "Mot": "Bus", "tot": 23804.86, "percent": 12.282925554662102}, {"End_Nome_Comune": "Cascina", "Mot": "Road", "tot": 160875.65, "percent": 83.00925241769438}, {"End_Nome_Comune": "Cascina", "Mot": "SlowModes", "tot": 5924.32, "percent": 3.056854000485438}, {"End_Nome_Comune": "Cascina", "Mot": "Train", "tot": 3199.65, "percent": 1.6509680271580927}, {"End_Nome_Comune": "Firenze", "Mot": "Bus", "tot": 41056.03, "percent": 9.629825472910376}, {"End_Nome_Comune": "Firenze", "Mot": "Road", "tot": 348711.88, "percent": 81.79150650295381}, {"End_Nome_Comune": "Firenze", "Mot": "SlowModes", "tot": 3896.45, "percent": 0.9139250303529501}, {"End_Nome_Comune": "Firenze", "Mot": "Train", "tot": 29466.51, "percent": 6.911465833295824}, {"End_Nome_Comune": "Firenze", "Mot": "Tram", "tot": 3211.54, "percent": 0.7532771604870366}, {"End_Nome_Comune": "Grosseto", "Mot": "Bus", "tot": 7855.44, "percent": 4.9519504895726465}, {"End_Nome_Comune": "Grosseto", "Mot": "Road", "tot": 140677.99, "percent": 88.68127583592972}, {"End_Nome_Comune": "Grosseto", "Mot": "SlowModes", "tot": 2191.08, "percent": 1.3812236715820925}, {"End_Nome_Comune": "Grosseto", "Mot": "Train", "tot": 7908.74, "percent": 4.98555000291553}, {"End_Nome_Comune": "Livorno", "Mot": "Bus", "tot": 16240.12, "percent": 7.857401980844145}, {"End_Nome_Comune": "Livorno", "Mot": "Road", "tot": 178951.07, "percent": 86.58128707744642}, {"End_Nome_Comune": "Livorno", "Mot": "SlowModes", "tot": 4136.74, "percent": 2.0014648334025367}, {"End_Nome_Comune": "Livorno", "Mot": "Train", "tot": 7357.69, "percent": 3.5598461083069055}, {"End_Nome_Comune": "Lucca", "Mot": "Bus", "tot": 31589.14, "percent": 12.81649416943185}, {"End_Nome_Comune": "Lucca", "Mot": "Road", "tot": 195885.24, "percent": 79.47547911521991}, {"End_Nome_Comune": "Lucca", "Mot": "SlowModes", "tot": 10556.27, "percent": 4.282939418608684}, {"End_Nome_Comune": "Lucca", "Mot": "Train", "tot": 8441.9, "percent": 3.425087296739535}, {"End_Nome_Comune": "Massa", "Mot": "Bus", "tot": 13594.89, "percent": 7.7794170923445165}, {"End_Nome_Comune": "Massa", "Mot": "Road", "tot": 149067.34, "percent": 85.3009485701121}, {"End_Nome_Comune": "Massa", "Mot": "SlowModes", "tot": 10104.35, "percent": 5.782022002166352}, {"End_Nome_Comune": "Massa", "Mot": "Train", "tot": 1988.03, "percent": 1.137612335377018}, {"End_Nome_Comune": "Pisa", "Mot": "Bus", "tot": 42742.68, "percent": 11.688984965555072}, {"End_Nome_Comune": "Pisa", "Mot": "Road", "tot": 297764.17, "percent": 81.43057258952841}, {"End_Nome_Comune": "Pisa", "Mot": "SlowModes", "tot": 7311.6, "percent": 1.999527930259695}, {"End_Nome_Comune": "Pisa", "Mot": "Train", "tot": 17847.86, "percent": 4.880914514656819}, {"End_Nome_Comune": "Pontedera", "Mot": "Bus", "tot": 14285.12, "percent": 8.365156969080509}, {"End_Nome_Comune": "Pontedera", "Mot": "Road", "tot": 146756.03, "percent": 85.9381809259627}, {"End_Nome_Comune": "Pontedera", "Mot": "SlowModes", "tot": 6143.61, "percent": 3.5976080009697293}, {"End_Nome_Comune": "Pontedera", "Mot": "Train", "tot": 3584.54, "percent": 2.099054103987075}, {"End_Nome_Comune": "Prato", "Mot": "Bus", "tot": 33659.71, "percent": 9.12385564559018}, {"End_Nome_Comune": "Prato", "Mot": "Road", "tot": 319574.84, "percent": 86.62447502140031}, {"End_Nome_Comune": "Prato", "Mot": "SlowModes", "tot": 5023.679999999999, "percent": 1.3617268577072845}, {"End_Nome_Comune": "Prato", "Mot": "Train", "tot": 10661.57, "percent": 2.88994247530222}, {"End_Nome_Comune": "Siena", "Mot": "Bus", "tot": 27659.16, "percent": 16.293830394689678}, {"End_Nome_Comune": "Siena", "Mot": "Road", "tot": 135957.08, "percent": 80.0914273057192}, {"End_Nome_Comune": "Siena", "Mot": "SlowModes", "tot": 3333.16, "percent": 1.9635427727510109}, {"End_Nome_Comune": "Siena", "Mot": "Train", "tot": 2802.95, "percent": 1.6511995268401292}, {"End_Nome_Comune": "Viareggio", "Mot": "Bus", "tot": 26620.48, "percent": 11.265899941906753}, {"End_Nome_Comune": "Viareggio", "Mot": "Road", "tot": 195867.73, "percent": 82.89205333744574}, {"End_Nome_Comune": "Viareggio", "Mot": "SlowModes", "tot": 8551.02, "percent": 3.6188278994685104}, {"End_Nome_Comune": "Viareggio", "Mot": "Train", "tot": 5253.3, "percent": 2.223218821178985}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
