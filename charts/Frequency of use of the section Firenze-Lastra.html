@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-8a9d4060528afe6d925953757ac12d60"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "uid", "scale": {"scheme": "reds"}, "title": "Number of individual user", "type": "quantitative"}, "tooltip": [{"field": "uid", "title": "Number of Users", "type": "quantitative"}], "x": {"field": "uid", "type": "quantitative"}, "y": {"field": "days_used", "title": "Days used", "type": "nominal"}}, "height": 300, "title": "Frequency of use of the section Firenze-Lastra ", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-8a9d4060528afe6d925953757ac12d60": [{"days_used": 1, "uid": 1228}, {"days_used": 2, "uid": 317}, {"days_used": 3, "uid": 107}, {"days_used": 4, "uid": 85}, {"days_used": 5, "uid": 85}, {"days_used": 6, "uid": 41}, {"days_used": 7, "uid": 11}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
